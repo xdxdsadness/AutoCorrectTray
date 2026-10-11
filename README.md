@@ -4,7 +4,7 @@
 
 # AutoCorrect Tray
 
-T9-like word correction, auto-punctuation and instant translation in any text field on Windows.
+Typo correction, auto-punctuation and instant translation in any text field on Windows.
 
 [![Platform](https://img.shields.io/badge/platform-Windows-blue)](https://github.com/xdxdsadness/AutoCorrectTray)
 [![.NET](https://img.shields.io/badge/.NET-8.0-purple)](https://dotnet.microsoft.com/download/dotnet/8.0)
@@ -21,7 +21,7 @@ replacements only happen on your click or hotkey.
 
 ## Features
 
-- **Spelling hints (T9-like)** - when a misspelled word is finished (space/punctuation), a bubble
+- **Spelling hints** - when a misspelled word is finished (space/punctuation), a bubble
   appears at the caret with suggestions; press `1-9` to pick one or add the word to your dictionary.
 - **Fix menu on right click** - right-click a misspelled word near the caret to get suggestions;
   a correct word keeps the app's own context menu.

@@ -23,7 +23,7 @@
     <sys:String x:Key="about.title">About AutoCorrect Tray</sys:String>
     <sys:String x:Key="about.body">AutoCorrect Tray 1.0
 
-T9-like word correction, auto-punctuation and translation in any text field.
+Typo correction, auto-punctuation and translation in any text field.
 
 {0} — word fix suggestions
 {1} — translate selected text

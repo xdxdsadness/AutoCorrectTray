@@ -12,7 +12,7 @@
     <ApplicationIcon>Assets\app.ico</ApplicationIcon>
     <Version>1.0.0</Version>
     <Product>AutoCorrect Tray</Product>
-    <Description>T9-like word correction, autopunctuation and translation in any Windows text field</Description>
+    <Description>Typo correction, autopunctuation and translation in any Windows text field</Description>
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
   </PropertyGroup>
 
