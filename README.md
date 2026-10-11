@@ -77,14 +77,6 @@ src/AutoCorrectTray/bin/Release/net8.0-windows/AutoCorrectTray.exe
 dotnet test
 ```
 
-### Regenerate brand assets (optional)
-
-After replacing `assets/logo-source.png`, run:
-
-```bash
-python tools/make_logo.py
-```
-
 ## Project structure
 
 ```
