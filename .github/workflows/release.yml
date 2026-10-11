@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Publish app
+        run: >
+          dotnet publish src/AutoCorrectTray/AutoCorrectTray.csproj
+          -c Release -r win-x64 --self-contained true
+          -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:EnableCompressionInSingleFile=true
+          -o publish
+
+      - name: Zip build
+        shell: pwsh
+        run: Compress-Archive -Path "publish/*" -DestinationPath "AutoCorrectTray-${{ github.ref_name }}-win-x64.zip"
+
+      - name: Attach build to the release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: AutoCorrectTray-${{ github.ref_name }}-win-x64.zip
+          body: |
+            First public release.
+
+            - Spelling suggestions at the caret (ru + en dictionaries)
+            - Fix menu on right click and double click
+            - Auto-punctuation (period on Enter, capitalization, auto-space)
+            - Translate selection / live translation (Alt+2)
+            - Region translate - scissors without a screenshot (Alt+3), selectable and copyable results
+            - Follows the monitor you work on, light/dark themes, English/Russian UI
+
+            **Note:** the app uses low-level keyboard/mouse hooks; some antivirus tools may flag this
+            class of software (like Punto Switcher). No data leaves your machine except the text you
+            send to the translation endpoint.
+          fail_on_unmatched_files: true
