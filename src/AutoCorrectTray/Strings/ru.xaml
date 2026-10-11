@@ -1,0 +1,104 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- Русские строки интерфейса. Ключи совпадают со Strings/en.xaml. -->
+    <sys:String x:Key="tray.settings">Настройки</sys:String>
+    <sys:String x:Key="tray.pause">Пауза</sys:String>
+    <sys:String x:Key="tray.about">О программе</sys:String>
+    <sys:String x:Key="tray.exit">Выход</sys:String>
+    <sys:String x:Key="tray.tooltip">AutoCorrect Tray</sys:String>
+    <sys:String x:Key="tray.tooltip.paused">AutoCorrect Tray (пауза)</sys:String>
+
+    <sys:String x:Key="balloon.firstrun.title">AutoCorrect Tray запущен</sys:String>
+    <sys:String x:Key="balloon.firstrun.body">{0} — исправление слов, {1} — перевод выделенного, ПКМ по слову с опечаткой — варианты. Настройки — клик по иконке.</sys:String>
+    <sys:String x:Key="balloon.pause.on">Пауза: исправление и перевод отключены. Нажмите {0}, чтобы продолжить.</sys:String>
+    <sys:String x:Key="balloon.pause.off">Приложение снова работает.</sys:String>
+    <sys:String x:Key="balloon.paused.action">Приложение на паузе — нажмите {0}, чтобы продолжить.</sys:String>
+    <sys:String x:Key="balloon.capture.fail">В выделенной области не найден читаемый текст ({0}). Некоторые приложения не отдают текст через механизм доступности Windows — попробуйте браузер, документ или сообщение.</sys:String>
+    <sys:String x:Key="balloon.translate.fail">Не удалось перевести текст окна — проверьте подключение к интернету.</sys:String>
+    <sys:String x:Key="balloon.hotkey.taken">«{0}» не удалось занять — возможно, эта комбинация уже используется другой программой.</sys:String>
+    <sys:String x:Key="balloon.hotkey.dup">Сочетание {0} назначено двум действиям — горячие клавиши оставлены прежними.</sys:String>
+    <sys:String x:Key="balloon.hotkey.invalid">«{0}» — некорректное сочетание, для этого действия оставлено прежнее ({1}).</sys:String>
+
+    <sys:String x:Key="about.title">О программе AutoCorrect Tray</sys:String>
+    <sys:String x:Key="about.body">AutoCorrect Tray 1.0
+
+T9-подобное исправление слов, автопунктуация и перевод в любом текстовом поле.
+
+{0} — варианты исправления слова
+{1} — перевод выделенного текста
+{2} — перевод текста по области
+{3} — пауза
+ПКМ по слову с опечаткой — варианты
+
+Настройки: %APPDATA%\AutoCorrectTray\settings.json
+Лог: %APPDATA%\AutoCorrectTray\log.txt</sys:String>
+
+    <sys:String x:Key="popup.title">Перевод</sys:String>
+    <sys:String x:Key="popup.detected">определён: {0}</sys:String>
+    <sys:String x:Key="popup.mode.live">Живой перевод: печатайте текст — он появится здесь и переведётся на лету</sys:String>
+    <sys:String x:Key="popup.live.placeholder">Печатайте текст — перевод появится здесь</sys:String>
+    <sys:String x:Key="popup.translating">Переводим…</sys:String>
+    <sys:String x:Key="popup.failed">Не удалось перевести</sys:String>
+    <sys:String x:Key="popup.error.net">Ошибка перевода — проверьте подключение к интернету</sys:String>
+    <sys:String x:Key="popup.btn.replace">Заменить</sys:String>
+    <sys:String x:Key="popup.btn.copy">Копировать</sys:String>
+    <sys:String x:Key="popup.btn.close">Закрыть</sys:String>
+    <sys:String x:Key="popup.copied">✓ Скопировано</sys:String>
+    <sys:String x:Key="popup.auto">Автоперевод</sys:String>
+    <sys:String x:Key="popup.auto.tooltip">Как только набранное предложение заканчивается точкой, оно заменяется переводом автоматически</sys:String>
+
+    <sys:String x:Key="hint.title">Возможно, опечатка</sys:String>
+    <sys:String x:Key="hint.none">Вариантов не найдено</sys:String>
+    <sys:String x:Key="hint.footer">1–9 — выбрать, любая буква — продолжить печатать</sys:String>
+    <sys:String x:Key="hint.add">＋ Добавить в словарь</sys:String>
+
+    <sys:String x:Key="region.hint">Обведите мышью область — её текст будет переведён поверх. Esc — отмена</sys:String>
+
+    <sys:String x:Key="settings.title">AutoCorrect Tray — настройки</sys:String>
+    <sys:String x:Key="tab.general">Общие</sys:String>
+    <sys:String x:Key="tab.hotkeys">Горячие клавиши</sys:String>
+    <sys:String x:Key="tab.translate">Перевод</sys:String>
+    <sys:String x:Key="tab.dict">Мой словарь</sys:String>
+    <sys:String x:Key="tab.exclusions">Исключения</sys:String>
+
+    <sys:String x:Key="lbl.theme">Тема оформления:</sys:String>
+    <sys:String x:Key="theme.light">Светлая</sys:String>
+    <sys:String x:Key="theme.dark">Тёмная</sys:String>
+    <sys:String x:Key="lbl.language">Язык интерфейса:</sys:String>
+
+    <sys:String x:Key="chk.spell">Проверять орфографию при вводе (подсказка у каретки)</sys:String>
+    <sys:String x:Key="chk.rightclick">Меню исправлений по правой кнопке мыши</sys:String>
+    <sys:String x:Key="chk.doubleclick">Варианты написания по двойному клику на слово</sys:String>
+    <sys:String x:Key="chk.autoperiod">Ставить точку в конце предложения при нажатии Enter</sys:String>
+    <sys:String x:Key="chk.autocapital">Заглавная буква в начале следующего предложения</sys:String>
+    <sys:String x:Key="chk.spaceafter">Автопробел после знаков препинания (может мешать вводу дробей)</sys:String>
+    <sys:String x:Key="chk.translate.on">Перевод по горячей клавише</sys:String>
+    <sys:String x:Key="chk.autoreplace">Автоперевод: точка в конце предложения — набранный текст сразу заменяется переводом</sys:String>
+    <sys:String x:Key="settings.note">Приложение не работает в программах из списка «Исключения» и в полях паролей.&#10;Меню по ПКМ показывается только для слова у каретки; для остального текста работает хоткей исправления и обычное меню программы.</sys:String>
+
+    <sys:String x:Key="lbl.fix">Варианты исправления слова:</sys:String>
+    <sys:String x:Key="lbl.translate.sel">Перевод выделенного текста:</sys:String>
+    <sys:String x:Key="lbl.region">Перевод текста по области:</sys:String>
+    <sys:String x:Key="lbl.pause">Пауза / продолжить:</sys:String>
+    <sys:String x:Key="btn.record">Записать</sys:String>
+    <sys:String x:Key="hotkey.status">Записано: {0} — нажмите «Сохранить» внизу окна, чтобы применить.</sys:String>
+    <sys:String x:Key="hotkey.recording">Нажмите сочетание клавиш…</sys:String>
+    <sys:String x:Key="hotkey.invalid.press">Буквы и цифры нельзя — F1–F24, Pause, Scroll Lock или с Ctrl/Alt/Shift/Win</sys:String>
+    <sys:String x:Key="hotkey.hint">Нажмите «Записать», затем нажмите новое сочетание клавиш (Esc — отмена).&#10;Сочетание должно содержать Ctrl, Alt, Shift или Win, либо быть одиночной клавишей F1–F24, Pause или Scroll Lock — например, просто F8.&#10;«Перевод текста по области» работает даже там, где текст нельзя выделить.</sys:String>
+
+    <sys:String x:Key="chk.autotranslate.sel">Пока окно открыто: новое выделение переводится автоматически, окно не закрывается</sys:String>
+    <sys:String x:Key="lbl.src.lang">Язык исходного текста:</sys:String>
+    <sys:String x:Key="lbl.tgt.lang">Язык перевода:</sys:String>
+    <sys:String x:Key="translate.note">Перевод выполняется онлайн через бесплатный Google Translate (без API-ключа).&#10;Языки можно быстро менять прямо в окне перевода.</sys:String>
+
+    <sys:String x:Key="dict.label">Слова, которые не считаются ошибками (имена, никнеймы, термины):</sys:String>
+    <sys:String x:Key="btn.add">Добавить</sys:String>
+    <sys:String x:Key="btn.remove">Удалить выбранное</sys:String>
+
+    <sys:String x:Key="excl.label">Программы, где функции отключены (имя процесса, без .exe):&#10;IDE, терминалы и поля паролей также распознаются автоматически.</sys:String>
+
+    <sys:String x:Key="btn.save">Сохранить</sys:String>
+    <sys:String x:Key="btn.close">Закрыть</sys:String>
+    <sys:String x:Key="chk.autostart">Запускать с Windows</sys:String>
+</ResourceDictionary>

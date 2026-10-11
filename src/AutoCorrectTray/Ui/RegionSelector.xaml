@@ -1,0 +1,26 @@
+<Window x:Class="AutoCorrectTray.Ui.RegionSelector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select an area to translate"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ShowInTaskbar="False" Topmost="True"
+        ResizeMode="NoResize" Cursor="Cross" UseLayoutRounding="True">
+    <!-- "Reverse scissors" mode: the screen dims, the user outlines an area -
+         the text inside it is read via the accessibility layer and translated on top. -->
+    <Grid>
+        <Canvas x:Name="Canvas" Background="Transparent" Cursor="Cross">
+            <Rectangle x:Name="ShadeTop" Fill="#66000000"/>
+            <Rectangle x:Name="ShadeBottom" Fill="#66000000"/>
+            <Rectangle x:Name="ShadeLeft" Fill="#66000000"/>
+            <Rectangle x:Name="ShadeRight" Fill="#66000000"/>
+            <Border x:Name="SelectionBox" BorderBrush="{DynamicResource Accent}" BorderThickness="2"
+                    CornerRadius="3" Visibility="Hidden"/>
+            <!-- Hint on the monitor with the cursor - position is set in Start() -->
+            <Border x:Name="HintBorder" Background="#AA20222A" CornerRadius="8" Padding="16,9"
+                    IsHitTestVisible="False">
+                <TextBlock Text="{DynamicResource region.hint}"
+                           FontSize="14" Foreground="White"/>
+            </Border>
+        </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,78 @@
+<Window x:Class="AutoCorrectTray.Ui.TranslatePopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
+        Title="{DynamicResource popup.title}"
+        Width="480" SizeToContent="Height"
+        WindowStyle="None" Background="{DynamicResource BgWindow}"
+        ShowActivated="False" ShowInTaskbar="False" Topmost="True"
+        ResizeMode="NoResize" Focusable="False" UseLayoutRounding="True">
+    <!-- Non-layered window (no AllowsTransparency): dragging does not block
+         the hook thread or any input in the system. Rounding via DWM (RoundCorners). -->
+    <shell:WindowChrome.WindowChrome>
+        <shell:WindowChrome CaptionHeight="0" CornerRadius="0" GlassFrameThickness="0"
+                            UseAeroCaptionButtons="False"/>
+    </shell:WindowChrome.WindowChrome>
+    <Border BorderBrush="{DynamicResource BorderSubtle}" BorderThickness="1"
+            Background="{DynamicResource BgWindow}">
+        <StackPanel Margin="14,12">
+            <Grid x:Name="HeaderBar" Background="Transparent" MinHeight="28" Cursor="SizeAll">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{DynamicResource popup.title}" FontSize="13" FontWeight="SemiBold"
+                           Foreground="{DynamicResource TextSecondary}" VerticalAlignment="Center"/>
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <TextBlock x:Name="DetectedText" FontSize="11.5"
+                               Foreground="{DynamicResource TextMuted}"
+                               VerticalAlignment="Center" Margin="0,0,8,0"/>
+                    <Button x:Name="CloseButton" Content="✕" FontSize="11" Background="Transparent"
+                            BorderThickness="0" Foreground="{DynamicResource TextMuted}"
+                            Cursor="Hand" Padding="6,0"/>
+                </StackPanel>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                <ComboBox x:Name="CmbSource" Width="145" DisplayMemberPath="Name" FontSize="12" Height="26"/>
+                <Button x:Name="SwapButton" Content="⇄" Width="30" Height="26" Margin="6,0" FontSize="12"/>
+                <ComboBox x:Name="CmbTarget" Width="145" DisplayMemberPath="Name" FontSize="12" Height="26"/>
+            </StackPanel>
+
+            <TextBlock x:Name="ModeText" FontSize="11" Foreground="{DynamicResource TextMuted}" FontStyle="Italic"
+                       Margin="0,7,0,0" TextWrapping="Wrap" Visibility="Collapsed"/>
+
+            <Border Background="{DynamicResource BgCard}" CornerRadius="8" Padding="10,7" Margin="0,10,0,0" MaxHeight="100">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBlock x:Name="SourceText" TextWrapping="Wrap" FontSize="12.5"
+                               Foreground="{DynamicResource TextSecondary}"/>
+                </ScrollViewer>
+            </Border>
+
+            <Border Background="{DynamicResource BgAccent}" CornerRadius="8" Padding="10,8" Margin="0,7,0,0" MinHeight="54">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="140">
+                    <TextBlock x:Name="ResultText" TextWrapping="Wrap" FontSize="14"
+                               Foreground="{DynamicResource TextPrimary}"/>
+                </ScrollViewer>
+            </Border>
+
+            <Grid Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="ChkAutoReplace" Content="{DynamicResource popup.auto}" FontSize="11.5"
+                          Foreground="{DynamicResource TextSecondary}" VerticalAlignment="Center"
+                          ToolTip="{DynamicResource popup.auto.tooltip}"/>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="ReplaceButton" Content="{DynamicResource popup.btn.replace}" FontWeight="SemiBold" FontSize="12"
+                            Background="{DynamicResource Accent}" BorderBrush="{DynamicResource Accent}"
+                            Foreground="{DynamicResource OnAccentText}"
+                            Padding="12,4" Margin="0,0,6,0"/>
+                    <Button x:Name="CopyButton" Content="{DynamicResource popup.btn.copy}" FontSize="12" Padding="12,4" Margin="0,0,6,0"/>
+                    <Button x:Name="CloseAllButton" Content="{DynamicResource popup.btn.close}" FontSize="12" Padding="12,4"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>

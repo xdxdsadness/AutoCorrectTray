@@ -1,0 +1,15 @@
+* text=auto
+
+# Sources
+*.cs text
+*.xaml text
+*.csproj text
+*.slnx text
+*.py text
+*.md text
+
+# Binaries
+*.png binary
+*.ico binary
+*.dll binary
+*.exe binary

@@ -1,0 +1,20 @@
+# Build output
+bin/
+obj/
+publish/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Tooling state (local assistant plans)
+.zcode/
+
+# Test results
+TestResults/
+
+# Runtime data created next to the exe during development
+*.log

@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AutoCorrectTray/AutoCorrectTray.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AutoCorrectTray.Tests/AutoCorrectTray.Tests.csproj" />
+  </Folder>
+</Solution>

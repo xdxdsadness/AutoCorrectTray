@@ -1,0 +1,104 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- English UI strings. Russian: Strings/ru.xaml (same keys). -->
+    <sys:String x:Key="tray.settings">Settings</sys:String>
+    <sys:String x:Key="tray.pause">Pause</sys:String>
+    <sys:String x:Key="tray.about">About</sys:String>
+    <sys:String x:Key="tray.exit">Exit</sys:String>
+    <sys:String x:Key="tray.tooltip">AutoCorrect Tray</sys:String>
+    <sys:String x:Key="tray.tooltip.paused">AutoCorrect Tray (paused)</sys:String>
+
+    <sys:String x:Key="balloon.firstrun.title">AutoCorrect Tray is running</sys:String>
+    <sys:String x:Key="balloon.firstrun.body">{0} — word fixes, {1} — translate selection, right click a misspelled word — suggestions. Click the icon for settings.</sys:String>
+    <sys:String x:Key="balloon.pause.on">Paused: correction and translation are off. Press {0} to resume.</sys:String>
+    <sys:String x:Key="balloon.pause.off">The app is active again.</sys:String>
+    <sys:String x:Key="balloon.paused.action">The app is paused — press {0} to resume.</sys:String>
+    <sys:String x:Key="balloon.capture.fail">No readable text found in the selected area ({0}). Some apps do not expose text via Windows accessibility — try a browser, document or chat.</sys:String>
+    <sys:String x:Key="balloon.translate.fail">Could not translate the window text — check your internet connection.</sys:String>
+    <sys:String x:Key="balloon.hotkey.taken">"{0}" could not be registered — the combination may already be in use by another program.</sys:String>
+    <sys:String x:Key="balloon.hotkey.dup">The combination {0} is assigned to two actions — hotkeys were left unchanged.</sys:String>
+    <sys:String x:Key="balloon.hotkey.invalid">"{0}" is not a valid combination; the previous value ({1}) was kept for this action.</sys:String>
+
+    <sys:String x:Key="about.title">About AutoCorrect Tray</sys:String>
+    <sys:String x:Key="about.body">AutoCorrect Tray 1.0
+
+T9-like word correction, auto-punctuation and translation in any text field.
+
+{0} — word fix suggestions
+{1} — translate selected text
+{2} — translate a selected region
+{3} — pause
+Right click a misspelled word — suggestions
+
+Settings: %APPDATA%\AutoCorrectTray\settings.json
+Log: %APPDATA%\AutoCorrectTray\log.txt</sys:String>
+
+    <sys:String x:Key="popup.title">Translation</sys:String>
+    <sys:String x:Key="popup.detected">detected: {0}</sys:String>
+    <sys:String x:Key="popup.mode.live">Live translation: keep typing — the text appears here and is translated as you go</sys:String>
+    <sys:String x:Key="popup.live.placeholder">Keep typing — the translation will appear here</sys:String>
+    <sys:String x:Key="popup.translating">Translating…</sys:String>
+    <sys:String x:Key="popup.failed">Translation failed</sys:String>
+    <sys:String x:Key="popup.error.net">Translation error — check your internet connection</sys:String>
+    <sys:String x:Key="popup.btn.replace">Replace</sys:String>
+    <sys:String x:Key="popup.btn.copy">Copy</sys:String>
+    <sys:String x:Key="popup.btn.close">Close</sys:String>
+    <sys:String x:Key="popup.copied">✓ Copied</sys:String>
+    <sys:String x:Key="popup.auto">Auto-translate</sys:String>
+    <sys:String x:Key="popup.auto.tooltip">When a typed sentence ends with a period, it is replaced with the translation automatically</sys:String>
+
+    <sys:String x:Key="hint.title">Possible typo</sys:String>
+    <sys:String x:Key="hint.none">No suggestions</sys:String>
+    <sys:String x:Key="hint.footer">1–9 to pick, any letter to keep typing</sys:String>
+    <sys:String x:Key="hint.add">＋ Add to dictionary</sys:String>
+
+    <sys:String x:Key="region.hint">Drag to select an area — its text will be translated in place. Esc to cancel</sys:String>
+
+    <sys:String x:Key="settings.title">AutoCorrect Tray — Settings</sys:String>
+    <sys:String x:Key="tab.general">General</sys:String>
+    <sys:String x:Key="tab.hotkeys">Hotkeys</sys:String>
+    <sys:String x:Key="tab.translate">Translation</sys:String>
+    <sys:String x:Key="tab.dict">My dictionary</sys:String>
+    <sys:String x:Key="tab.exclusions">Exclusions</sys:String>
+
+    <sys:String x:Key="lbl.theme">Theme:</sys:String>
+    <sys:String x:Key="theme.light">Light</sys:String>
+    <sys:String x:Key="theme.dark">Dark</sys:String>
+    <sys:String x:Key="lbl.language">Language:</sys:String>
+
+    <sys:String x:Key="chk.spell">Check spelling while typing (hint at the caret)</sys:String>
+    <sys:String x:Key="chk.rightclick">Fix menu on right click</sys:String>
+    <sys:String x:Key="chk.doubleclick">Spelling suggestions on double click</sys:String>
+    <sys:String x:Key="chk.autoperiod">Add a period at the end of a sentence on Enter</sys:String>
+    <sys:String x:Key="chk.autocapital">Capitalize the first letter of the next sentence</sys:String>
+    <sys:String x:Key="chk.spaceafter">Auto-space after punctuation (may interfere with decimals)</sys:String>
+    <sys:String x:Key="chk.translate.on">Translation by hotkey</sys:String>
+    <sys:String x:Key="chk.autoreplace">Auto-translate: a sentence ending with a period is replaced with its translation right away</sys:String>
+    <sys:String x:Key="settings.note">The app is off in programs from the "Exclusions" list and in password fields.&#10;The right-click menu appears only for the word at the caret; for the rest of the text use the fix hotkey and the app's own menu.</sys:String>
+
+    <sys:String x:Key="lbl.fix">Word fix suggestions:</sys:String>
+    <sys:String x:Key="lbl.translate.sel">Translate selected text:</sys:String>
+    <sys:String x:Key="lbl.region">Translate text by region:</sys:String>
+    <sys:String x:Key="lbl.pause">Pause / resume:</sys:String>
+    <sys:String x:Key="btn.record">Record</sys:String>
+    <sys:String x:Key="hotkey.status">Recorded: {0} — press "Save" at the bottom of the window to apply.</sys:String>
+    <sys:String x:Key="hotkey.recording">Press a key combination…</sys:String>
+    <sys:String x:Key="hotkey.invalid.press">Letters and digits are not allowed — F1–F24, Pause, Scroll Lock, or with Ctrl/Alt/Shift/Win</sys:String>
+    <sys:String x:Key="hotkey.hint">Click "Record", then press the new combination (Esc — cancel).&#10;The combination must include Ctrl, Alt, Shift or Win, or be a single key F1–F24, Pause or Scroll Lock — e.g. just F8.&#10;"Translate text by region" works even where text cannot be selected.</sys:String>
+
+    <sys:String x:Key="chk.autotranslate.sel">While the window is open: new selections are translated automatically and the window stays open</sys:String>
+    <sys:String x:Key="lbl.src.lang">Source language:</sys:String>
+    <sys:String x:Key="lbl.tgt.lang">Target language:</sys:String>
+    <sys:String x:Key="translate.note">Translation runs online via the free Google Translate endpoint (no API key).&#10;Languages can be changed right in the translation window.</sys:String>
+
+    <sys:String x:Key="dict.label">Words that are not treated as errors (names, nicknames, terms):</sys:String>
+    <sys:String x:Key="btn.add">Add</sys:String>
+    <sys:String x:Key="btn.remove">Remove selected</sys:String>
+
+    <sys:String x:Key="excl.label">Apps where features are disabled (process name, without .exe):&#10;IDEs, terminals and password fields are also detected automatically.</sys:String>
+
+    <sys:String x:Key="btn.save">Save</sys:String>
+    <sys:String x:Key="btn.close">Close</sys:String>
+    <sys:String x:Key="chk.autostart">Start with Windows</sys:String>
+</ResourceDictionary>

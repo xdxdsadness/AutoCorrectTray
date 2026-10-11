@@ -1,0 +1,33 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Light palette. Dark: Themes/Dark.xaml with the same keys;
+         switching: ThemeManager swaps the dictionary, styles in App.xaml
+         reference the brushes via DynamicResource. -->
+    <SolidColorBrush x:Key="BgWindow" Color="#FAFBFE"/>
+    <SolidColorBrush x:Key="BgCard" Color="#F0F2F7"/>
+    <SolidColorBrush x:Key="BgAccent" Color="#EAF1FF"/>
+    <SolidColorBrush x:Key="BgButton" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="BgHover" Color="#EEF1F8"/>
+    <SolidColorBrush x:Key="BgPressed" Color="#E3E8F2"/>
+
+    <SolidColorBrush x:Key="BorderSubtle" Color="#D7DBE6"/>
+    <SolidColorBrush x:Key="BorderStrong" Color="#CBD3E1"/>
+
+    <SolidColorBrush x:Key="TextPrimary" Color="#1B2437"/>
+    <SolidColorBrush x:Key="TextSecondary" Color="#5A6070"/>
+    <SolidColorBrush x:Key="TextMuted" Color="#8A90A0"/>
+
+    <SolidColorBrush x:Key="Accent" Color="#3B7AE8"/>
+    <SolidColorBrush x:Key="AccentHover" Color="#2F66CC"/>
+    <SolidColorBrush x:Key="OnAccentText" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Danger" Color="#D64545"/>
+
+    <SolidColorBrush x:Key="SwitchOn" Color="#E069C4"/>
+    <SolidColorBrush x:Key="SwitchOff" Color="#D5D9E4"/>
+    <SolidColorBrush x:Key="SwitchThumb" Color="#FFFFFF"/>
+
+    <SolidColorBrush x:Key="OverlayBg" Color="#E620222A"/>
+    <SolidColorBrush x:Key="OverlayBorder" Color="#3A4050"/>
+    <SolidColorBrush x:Key="OverlayText" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="OverlayMuted" Color="#9096A5"/>
+</ResourceDictionary>

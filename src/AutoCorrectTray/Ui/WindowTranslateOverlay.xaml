@@ -1,0 +1,15 @@
+<Window x:Class="AutoCorrectTray.Ui.WindowTranslateOverlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Region translation"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ShowActivated="False" ShowInTaskbar="False" Topmost="True"
+        ResizeMode="NoResize" Focusable="True" UseLayoutRounding="True">
+    <!-- Transparent "glass" exactly over the foreign window: translations sit on top
+         of their lines and can be selected with the mouse like normal text
+         (the window activates on click). -->
+    <Canvas x:Name="Canvas">
+        <Button x:Name="CopyAllButton" Canvas.Right="6" Canvas.Top="6"
+                Padding="10,3" FontSize="12" Visibility="Hidden"/>
+    </Canvas>
+</Window>
